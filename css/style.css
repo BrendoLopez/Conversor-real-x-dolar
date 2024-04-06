@@ -1,0 +1,90 @@
+:root{
+    --color: #560bad;
+}
+
+body {
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.converter {
+    background-color: #cccccc8e;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+h2{
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #560bad;
+    text-shadow: 1px 1px 1px black;
+}
+
+label {
+    font-weight: bold;
+    color: var(--color);
+}
+
+input {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 2px solid var(--color);
+    border-radius: 6px;
+}
+
+button {
+    color: var(--color);
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    padding: 0;
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+button:hover {
+    color: #fff;
+}
+
+button:before {
+    top: 100%;  
+    left: 100%;
+    transition: all .7s;
+}
+
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+button:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+}
